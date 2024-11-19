@@ -30,10 +30,10 @@ def main():
     try:
         pygame.init()
         
-        # Load mole image
+       
         mole_image = pygame.image.load("mole.png")
         
-        # Initialize screen and clock
+       
         screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
         pygame.display.set_caption("Whack-a-Mole")
         clock = pygame.time.Clock()
@@ -54,13 +54,13 @@ def main():
                     if mole_rect.collidepoint(mouse_pos):
                         mole_x, mole_y = move_mole()  # Move mole to a new position
 
-            # Fill the screen with background color
+         
             screen.fill(BACKGROUND_COLOR)
             
-            # Draw the grid
+            
             draw_grid(screen)
             
-            # Draw the mole
+          
             screen.blit(mole_image, mole_image.get_rect(topleft=(mole_x, mole_y)))
             
             # Update the display
